@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "New action",
+                    "name": "Pickup",
                     "type": "Button",
                     "id": "014a5fed-5f0e-4eb5-897c-7b77a005f5e3",
                     "expectedControlType": "Button",
@@ -286,11 +286,11 @@
                 {
                     "name": "",
                     "id": "f8cda15d-5d17-47e7-9968-1d0e8fffa4ab",
-                    "path": "",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Pickup",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

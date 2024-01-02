@@ -40,9 +40,11 @@ public class pickup : MonoBehaviour
                     grabbedobj = null;
                     break;
                 case null:
-                    grabbable grabcheck = castray().collider.gameObject.GetComponent<grabbable>();
-                    if(grabcheck!=null)
+                    grabbable grabcheck = castray().collider?.gameObject.GetComponent<grabbable>();
+                    if (grabcheck != null)
                     {
+                        
+
                         grabbedobj = grabcheck;
                         grabbedobj.gameObject.layer = pickeduplayer;
                         grabbedobj.rb.drag = grabbedobj.pickupdrag;
