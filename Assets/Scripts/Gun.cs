@@ -16,6 +16,12 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        crosshair.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,5));
+        crosshair.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,cdist));
+        transform.rotation = Quaternion.LookRotation(crosshair.position - transform.position);
+    }
+    private void OnDrawGizmos()
+    {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position,transform.position+transform.forward*cdist*5);
     }
 }
