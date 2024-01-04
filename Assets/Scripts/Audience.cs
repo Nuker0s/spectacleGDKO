@@ -27,6 +27,7 @@ public class Audience : MonoBehaviour
         {
             for (int i = 0; i < throwers; i++)
             {
+                
                 yeet(transform.GetChild(Random.Range(0, transform.childCount)).position);
             }
             
@@ -36,8 +37,9 @@ public class Audience : MonoBehaviour
     }
     public void yeet(Vector3 from) 
     {
+        Debug.Log("yeet");
         throwable toyeet = Instantiate(throwables[0], from, Quaternion.identity).GetComponent<throwable>();
-        toyeet.target = player.position;
+        toyeet.target = player;
         toyeet.speed = Random.Range(minmaxthrowspeed.x, minmaxthrowspeed.y);
     }
 }
