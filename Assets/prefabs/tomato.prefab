@@ -123,7 +123,7 @@ MonoBehaviour:
   distance: 0
   traveled: 0
   primaly: 0
-  heightmult: 0.2
+  heightmult: 0.7
   flightpath:
     serializedVersion: 2
     m_Curve:
@@ -137,8 +137,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.15347907
-      value: 0.6709157
+      time: 0.15692756
+      value: 0.6143056
       inSlope: 2.839066
       outSlope: 2.839066
       tangentMode: 0
