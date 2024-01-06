@@ -9,14 +9,16 @@ public class throwable : MonoBehaviour
     public float speed;
     public float distance;
     public float traveled = 0;
-    public float primaly;
     public float heightmult;
-    public AnimationCurve flightpath;
+    public AnimationCurve ycurve;
+    public AnimationCurve xcurve;
+    public Transform col;
     // Start is called before the first frame update
     void Start()
     {
-        primaly = transform.position.y;
+        
         distance = Vector3.Distance(transform.position,target.position);
+        col = transform.GetChild(0);
     }
 
     // Update is called once per frame
@@ -25,17 +27,15 @@ public class throwable : MonoBehaviour
 
         transform.position = Vector3.Lerp(transform.position, target.position, speed * Time.deltaTime);
 
-        traveled = (distance - Vector3.Distance(transform.position, target.position)) / distance;
-        float y = math.lerp(primaly, transform.position.y, traveled) + flightpath.Evaluate(traveled) * heightmult;
-        transform.position= new Vector3(transform.position.x,y,transform.position.z);
-
+        evaluatepos(1 - (Vector3.Distance(transform.position, target.position) / distance));
         if (Vector3.Distance(transform.position,target.position) < 1)
         {
             Destroy(gameObject);
         }
     }
-    private void OnMouseDown()
+    public void evaluatepos(float trav) 
     {
-        Destroy(gameObject);
+        col.localPosition = new Vector3(xcurve.Evaluate(trav), ycurve.Evaluate(trav) * heightmult, 0);
     }
+
 }
