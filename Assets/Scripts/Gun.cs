@@ -24,4 +24,8 @@ public class Gun : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position,transform.position+transform.forward*cdist*5);
     }
+    public void shot(Vector3 pos) 
+    {
+        
+    }
 }

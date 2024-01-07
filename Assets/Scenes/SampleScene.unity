@@ -1706,7 +1706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwables:
-  - {fileID: 8427556321569647753, guid: 46f95bb9fad22ed4a8bf44a1ce4c47e9, type: 3}
+  - {fileID: 2943698497735167082, guid: 46f95bb9fad22ed4a8bf44a1ce4c47e9, type: 3}
   cooldown: 1
   throwers: 2
   player: {fileID: 496184856}
