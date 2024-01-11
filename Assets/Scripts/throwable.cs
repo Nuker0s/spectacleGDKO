@@ -7,6 +7,7 @@ public class throwable : MonoBehaviour
 {
     public Transform target;
     public float speed;
+    public float offsetspeed;
     public float distance;
     public float traveled = 0;
     public float heightmult;
@@ -25,9 +26,9 @@ public class throwable : MonoBehaviour
     void Update()
     {
 
-        transform.position = Vector3.Lerp(transform.position, target.position, speed * Time.deltaTime);
+        transform.position += (target.position - transform.position).normalized * speed * Time.deltaTime; 
 
-        evaluatepos(1 - (Vector3.Distance(transform.position, target.position) / distance));
+        evaluatepos((Vector3.Distance(transform.position, target.position)/offsetspeed-math.floor(Vector3.Distance(transform.position, target.position)/offsetspeed)));
         if (Vector3.Distance(transform.position,target.position) < 1)
         {
             Destroy(gameObject);

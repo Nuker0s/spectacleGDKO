@@ -10,6 +10,7 @@ public class Audience : MonoBehaviour
     public int throwers = 1;
     public Transform player;
     public Vector2 minmaxthrowspeed;
+    public Vector2 offsetspeedminmax;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,5 +42,6 @@ public class Audience : MonoBehaviour
         throwable toyeet = Instantiate(throwables[0], from, Quaternion.identity).GetComponent<throwable>();
         toyeet.target = player;
         toyeet.speed = Random.Range(minmaxthrowspeed.x, minmaxthrowspeed.y);
+        toyeet.offsetspeed = offsetspeedminmax.x;
     }
 }
