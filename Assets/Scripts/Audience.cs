@@ -11,6 +11,7 @@ public class Audience : MonoBehaviour
     public Transform player;
     public Vector2 minmaxthrowspeed;
     public Vector2 offsetspeedminmax;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class Audience : MonoBehaviour
         }
         
     }
+    
     public void yeet(Vector3 from) 
     {
         Debug.Log("yeet");
