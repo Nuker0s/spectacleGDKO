@@ -708,6 +708,109 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274178518}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &305594360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305594364}
+  - component: {fileID: 305594363}
+  - component: {fileID: 305594362}
+  - component: {fileID: 305594361}
+  m_Layer: 0
+  m_Name: PLaymaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &305594361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305594360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: fe04c95c9791a7448ba4d4cc40d545fc,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &305594362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305594360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daacd85c56beacc409931b75fe3f21b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &305594363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305594360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3294a42ec19442147a7ebd7022fe0f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audience: {fileID: 531529311}
+  jokes: {fileID: 305594362}
+  pinput: {fileID: 305594361}
+  right:
+    m_Name: Right
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 10dfab50-2df4-4d33-bbf0-70086af49cb5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  say: 0
+  jokesaid: 1
+--- !u!4 &305594364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305594360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.955065, y: 8.853459, z: -12.931745}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &313712336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,6 +1789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 531529312}
   - component: {fileID: 531529311}
+  - component: {fileID: 531529313}
   m_Layer: 0
   m_Name: audience
   m_TagString: Untagged
@@ -1708,7 +1812,7 @@ MonoBehaviour:
   throwables:
   - {fileID: 2943698497735167082, guid: 46f95bb9fad22ed4a8bf44a1ce4c47e9, type: 3}
   cooldown: 1
-  throwers: 2
+  throwers: 0
   player: {fileID: 496184856}
   minmaxthrowspeed: {x: 0.7, y: 1.5}
   offsetspeedminmax: {x: 5, y: 0}
@@ -1747,6 +1851,18 @@ Transform:
   - {fileID: 313712337}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -89.988, z: 0}
+--- !u!114 &531529313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531529310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daacd85c56beacc409931b75fe3f21b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &583808398
 GameObject:
   m_ObjectHideFlags: 0
@@ -4055,3 +4171,4 @@ SceneRoots:
   - {fileID: 240491034}
   - {fileID: 2147352565}
   - {fileID: 531529312}
+  - {fileID: 305594364}

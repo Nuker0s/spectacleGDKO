@@ -303,18 +303,12 @@ public class Jokes : MonoBehaviour
 
     void Start()
     {
-
+        /* //say all
         foreach (var joke in terribleJokes)
         {
             Debug.Log(joke[0][0]);
-        }
-        // Example: Accessing a joke's word using indices
-        /*int jokeIndex = 0;
-        int punchlineOrSetupIndex = 0;
-        int wordIndex = 2;
+        }*/
 
-        string word = terribleJokes[jokeIndex][punchlineOrSetupIndex][wordIndex];
-        Debug.Log(word); // This will print the word at the specified indices*/
     }
 
     
