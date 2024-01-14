@@ -77,8 +77,8 @@ public class Audience : MonoBehaviour
     }
     public void yeet(Vector3 from) 
     {
-       // Debug.Log("yeet");
-        throwable toyeet = Instantiate(throwables[0], from, Quaternion.identity).GetComponent<throwable>();
+        // Debug.Log("yeet");
+        throwable toyeet = Instantiate(throwables[0], from + Vector3.up * 0.5f, Quaternion.identity).GetComponent<throwable>();
         toyeet.target = player;
         toyeet.speed = Random.Range(minmaxthrowspeed.x, minmaxthrowspeed.y);
         toyeet.offsetspeed = offsetspeedminmax.x;

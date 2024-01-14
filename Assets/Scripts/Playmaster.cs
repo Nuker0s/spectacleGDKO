@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 //using SpeechLib;
 
@@ -18,17 +17,47 @@ public class Playmaster : MonoBehaviour
     public Text wholejoke;
     public RectTransform nextwordrect;
     public Text nextword;
+    public Text hptext;
+    public int hp;
+    public Text scoretext;
+    public static int score;
+    public Text timetext;
+    public float timeleft;
     // Start is called before the first frame update
+
     void Start()
     {
         right = pinput.actions.FindAction("Right");
         StartCoroutine(joking());
     }
-
+    public void damage() 
+    {
+        hp -= 1;
+        hptext.text = hp.ToString();
+        if (hp <= 0) 
+        {
+            loose();
+        }
+    }
+    public void scoret() 
+    {
+        score += 1;
+        scoretext.text = score.ToString();
+    }
+    public void loose() 
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
     // Update is called once per frame
     void Update()
     {
+        timeleft -= Time.deltaTime;
+        timeleft= Mathf.Clamp(timeleft, -10, 80);
+        timetext.text = Mathf.Floor(timeleft).ToString();
+        if (timeleft <= 0)
+        {
 
+        }
     }
     public IEnumerator joking() 
     {
