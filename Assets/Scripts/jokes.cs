@@ -117,7 +117,8 @@ public class Jokes : MonoBehaviour
 
     new List<List<string>>
     {
-        new List<string> {"I", "used", "to", "play", "piano", "by", "ear,", "but", "now", "I", "use", "my", "hands."}
+        new List<string> {"I", "used", "to", "play", "piano", "by", "ear,"},
+        new List<string> {"but", "now", "I", "use", "my", "hands." }
     },
 
     new List<List<string>>

@@ -66,7 +66,7 @@ public class Audience : MonoBehaviour
         
         //Debug.Log("toyeet");
         yeet(hecler.position);
-        while (hecler.position.y > initpos.y)
+        while (hecler.position.y-0.05f > initpos.y)
         {
             //Debug.Log("plswork");
             hecler.position = Vector3.Lerp(hecler.position, new Vector3(hecler.position.x, initpos.y, hecler.position.z), getupspeed*Time.deltaTime);
