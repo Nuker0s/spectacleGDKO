@@ -64,11 +64,11 @@ public class Audience : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         
-        Debug.Log("toyeet");
+        //Debug.Log("toyeet");
         yeet(hecler.position);
         while (hecler.position.y > initpos.y)
         {
-            Debug.Log("plswork");
+            //Debug.Log("plswork");
             hecler.position = Vector3.Lerp(hecler.position, new Vector3(hecler.position.x, initpos.y, hecler.position.z), getupspeed*Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
@@ -77,7 +77,7 @@ public class Audience : MonoBehaviour
     }
     public void yeet(Vector3 from) 
     {
-        Debug.Log("yeet");
+       // Debug.Log("yeet");
         throwable toyeet = Instantiate(throwables[0], from, Quaternion.identity).GetComponent<throwable>();
         toyeet.target = player;
         toyeet.speed = Random.Range(minmaxthrowspeed.x, minmaxthrowspeed.y);
