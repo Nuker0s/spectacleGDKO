@@ -26,9 +26,10 @@ public class throwable : MonoBehaviour
     void Update()
     {
 
-        transform.position += (target.position - transform.position).normalized * speed * Time.deltaTime; 
+        transform.position += (target.position - transform.position).normalized * speed * Time.deltaTime;
 
-        evaluatepos((Vector3.Distance(transform.position, target.position)/offsetspeed-math.floor(Vector3.Distance(transform.position, target.position)/offsetspeed)));
+        evaluatepos(Vector3.Distance(transform.position, target.position) / distance);
+        //evaluatepos((Vector3.Distance(transform.position, target.position)/offsetspeed-math.floor(Vector3.Distance(transform.position, target.position)/offsetspeed)));
         if (Vector3.Distance(transform.position,target.position) < 1)
         {
             Destroy(gameObject);
@@ -36,7 +37,7 @@ public class throwable : MonoBehaviour
     }
     public void evaluatepos(float trav) 
     {
-        col.localPosition = new Vector3(xcurve.Evaluate(trav), ycurve.Evaluate(trav) * heightmult, 0);
+        col.localPosition = new Vector3(0, ycurve.Evaluate(trav) * heightmult, 0);
     }
 
 }
