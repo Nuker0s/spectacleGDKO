@@ -145,6 +145,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   col: {fileID: 0}
+  playmaster: {fileID: 0}
 --- !u!1 &4606776337586840194
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cede51424f726704ea724214be80d8ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playmaster: {fileID: 0}
 --- !u!114 &2994014098873450529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,4 +278,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71db821dc0945d46a52cb313ad6483b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxspeed: 1000
+  maxspeed: 500

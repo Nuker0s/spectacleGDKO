@@ -23,6 +23,10 @@ public class Playmaster : MonoBehaviour
     public static int score;
     public Text timetext;
     public float timeleft;
+    public GameObject allstuff;
+    public Text finalscore;
+    public int jokestold;
+    public GameObject allthestuff;
     // Start is called before the first frame update
 
     void Start()
@@ -44,9 +48,13 @@ public class Playmaster : MonoBehaviour
         score += 1;
         scoretext.text = score.ToString();
     }
+    public void addtime(float time) 
+    {
+        timeleft += time;
+    }
     public void loose() 
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("looser");
     }
     // Update is called once per frame
     void Update()
@@ -56,9 +64,10 @@ public class Playmaster : MonoBehaviour
         timetext.text = Mathf.Floor(timeleft).ToString();
         if (timeleft <= 0)
         {
-
+            loose();
         }
     }
+
     public IEnumerator joking() 
     {
         while (true)
@@ -78,8 +87,9 @@ public class Playmaster : MonoBehaviour
                 nextword.text = word;
                 //Debug.Log(word)
                 yield return new WaitUntil(() => say);
+                addtime(1);
                 wholejoke.text += " " + word;
-
+                
                 say = false;
 
             }
@@ -95,6 +105,7 @@ public class Playmaster : MonoBehaviour
                 wholejoke.text += " " + item;
                 yield return new WaitForSeconds(0.2f);
             }
+            addtime(5);
             say = false;
             nextword.text = "Okay another one";
             yield return new WaitUntil(() => say);
