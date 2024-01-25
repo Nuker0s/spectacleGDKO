@@ -10,7 +10,8 @@ public class restart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        final.text = "YOU LOST \n final score:" + Playmaster.score.ToString() + "\n Press on me to restart"; 
+        final.text = "YOU LOST \n final score:" + Playmaster.score.ToString() + "\n Press on me to restart";
+        Playmaster.score = 0;
     }
 
     // Update is called once per frame

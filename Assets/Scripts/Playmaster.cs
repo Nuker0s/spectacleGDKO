@@ -117,8 +117,8 @@ public class Playmaster : MonoBehaviour
     }
     public void moveword() 
     {
-        float width = Screen.width / 2;
-        float height = Screen.height / 2;   
-        nextwordrect.position = new Vector2(width, height) + new Vector2(Random.Range(-width*0.5f, width * 0.5f), Random.Range(-height * 0.5f, height * 0.5f));
+        float width = (Screen.width / 2);
+        float height = (Screen.height / 2);   
+        nextwordrect.position = Camera.main.ScreenToWorldPoint( new Vector3(width, height) + new Vector3(Random.Range(-width*0.5f, width * 0.5f), Random.Range(-height * 0.5f, height * 0.5f)) + Vector3.forward *1);
     }
 }
